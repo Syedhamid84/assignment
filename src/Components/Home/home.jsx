@@ -23,7 +23,7 @@ const HomeScreen = () => {
         </button>
 
         <button className="px-4 py-2 border rounded-md text-lg font-semibold w-36 group hover:bg-green-500">
-            <span className="group-hover:text-white"> List API  </span>
+            <span className="group-hover:text-white">CRUD</span>
         </button>
         <button
           className="px-4 py-2 border rounded-md text-lg font-semibold w-36 group hover:bg-yellow-500"

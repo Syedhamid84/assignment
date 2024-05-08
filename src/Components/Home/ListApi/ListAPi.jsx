@@ -4,26 +4,26 @@ const ListAPi = () => {
   const [data, setData] = useState(null);
   const [skip, setSkip] = useState(0);
 
-  const fetchData = async () => {
-    try {
-      const response = await fetch(
-        `https://dummyjson.com/products?limit=15&skip=${skip}&select=title,price`
-      );
-
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-
-      const result = await response.json();
-      setData(result?.products);
-    } catch (error) {
-      console.error("Error fetching data:", error.message);
-    }
-  };
-
+  
   useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await fetch(
+            `https://dummyjson.com/products?limit=15&skip=${skip}&select=title,price`
+          );
+    
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+    
+          const result = await response.json();
+          setData(result?.products);
+        } catch (error) {
+          console.error("Error fetching data:", error.message);
+        }
+      };
     fetchData();
-  }, [fetchData]); // Fetch data whenever skip value changes
+  },[]); // Fetch data whenever skip value changes
 
   const handleNext = () => {
     setSkip((prevSkip) => prevSkip + 15); // Increment skip value by 15 for next page

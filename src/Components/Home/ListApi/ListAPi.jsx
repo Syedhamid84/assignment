@@ -22,7 +22,7 @@ const ListAPi = () => {
           console.error("Error fetching data:", error.message);
         }
       };
-    fetchData();
+    fetchData(skip);
   },[]); // Fetch data whenever skip value changes
 
   const handleNext = () => {

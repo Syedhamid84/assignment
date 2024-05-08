@@ -22,8 +22,8 @@ const ListAPi = () => {
           console.error("Error fetching data:", error.message);
         }
       };
-    fetchData(skip);
-  },[]); // Fetch data whenever skip value changes
+    fetchData();
+  },[skip]); // Fetch data whenever skip value changes
 
   const handleNext = () => {
     setSkip((prevSkip) => prevSkip + 15); // Increment skip value by 15 for next page

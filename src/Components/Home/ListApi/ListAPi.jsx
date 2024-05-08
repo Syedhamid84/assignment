@@ -23,7 +23,7 @@ const ListAPi = () => {
 
   useEffect(() => {
     fetchData();
-  }, []); // Fetch data whenever skip value changes
+  }, [fetchData]); // Fetch data whenever skip value changes
 
   const handleNext = () => {
     setSkip((prevSkip) => prevSkip + 15); // Increment skip value by 15 for next page

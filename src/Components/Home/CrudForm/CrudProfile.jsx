@@ -22,10 +22,10 @@ const CrudForm = () => {
     // userMessage: "",
   });
 
-  const isValidEmail = (value) => {
-    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-    return emailRegex.test(value);
-  };
+  // const isValidEmail = (value) => {
+  //   const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+  //   return emailRegex.test(value);
+  // };
   // const isValidPhone = (value) => {
   //   const phoneNumberRegex = /^(\+[1-9]{1}[0-9]{3,14})?([0-9]{9,14})$/;
   //   return phoneNumberRegex.test(value);

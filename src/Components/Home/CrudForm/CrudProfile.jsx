@@ -35,28 +35,28 @@ const CrudForm = () => {
   //   return CnicRegex.test(value);
   // };
 
-  const isFormDisabled = () => {
-    return (
-      !isValidEmail(formdata.userEmail) ||
-      formdata.userName === "" ||
-      formdata.userDescription === ""
-      // !isValidCnic(formdata.userCnic) ||
-      // !isValidPhone(formdata.userNumber) ||
-      // formdata.userMessage === ""
-    );
-  };
+  // const isFormDisabled = () => {
+  //   return (
+  //     !isValidEmail(formdata.userEmail) ||
+  //     formdata.userName === "" ||
+  //     formdata.userDescription === ""
+  //     // !isValidCnic(formdata.userCnic) ||
+  //     // !isValidPhone(formdata.userNumber) ||
+  //     // formdata.userMessage === ""
+  //   );
+  // };
 
-  const handleSubmit = () => {
-    window.alert("forms submited succesfully");
-    setFormdata({
-      userName: "",
-      userEmail: "",
-      userDescription: "",
-      // userNumber: "",
-      // userMessage: "",
-    });
-  };
-  const buttonColor = isFormDisabled() ? "bg-gray-300" : "bg-blue-400";
+  // const handleSubmit = () => {
+  //   window.alert("forms submited succesfully");
+  //   setFormdata({
+  //     userName: "",
+  //     userEmail: "",
+  //     userDescription: "",
+  //     // userNumber: "",
+  //     // userMessage: "",
+  //   });
+  // };
+  // const buttonColor = isFormDisabled() ? "bg-gray-300" : "bg-blue-400";
   return (
     <div className="md:p-8 flex justify-center items-center p-4  ">
       <div className="md:p-10 max-w-full md:w-[60%] p-5 flex justify-center items-center   ">

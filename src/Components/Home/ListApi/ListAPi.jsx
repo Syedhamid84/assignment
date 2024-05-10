@@ -75,7 +75,6 @@ const ListAPi = () => {
           onClick={handlePrevios}
           disabled={skip === 0} // Disable previous button when on the first page
         >
-          
           <span className="group-hover:text-white">Previous</span>
         </button>
         <button
@@ -90,4 +89,3 @@ const ListAPi = () => {
 };
 
 export default ListAPi;
-

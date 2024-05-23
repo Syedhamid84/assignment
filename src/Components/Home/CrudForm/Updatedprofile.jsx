@@ -1,98 +1,44 @@
 import React from "react";
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { saveUser } from "../../../features/user/userSlice";
-import UpdatedProfile from "./Updatedprofile";
 
-const CrudForm = () => {
-  const dispatch = useDispatch();
-
-  const handleSaveUser = () => {
-    const userData = { formdata };
-    dispatch(saveUser(userData));
-    console.log("user data is", userData);
-  };
-  const [formdata, setFormdata] = useState({
-    userName: "",
-    userEmail: "",
-    userDescription: "",
-    // userNumber: "",
-    // userMessage: "",
-  });
-
-  const isValidEmail = (value) => {
-    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-    return emailRegex.test(value);
-  };
-  // const isValidPhone = (value) => {
-  //   const phoneNumberRegex = /^(\+[1-9]{1}[0-9]{3,14})?([0-9]{9,14})$/;
-  //   return phoneNumberRegex.test(value);
-  // };
-  // const isValidCnic = (value) => {
-  //   const CnicRegex = /^\d{5}-\d{7}-\d$/;
-  //   return CnicRegex.test(value);
-  // };
-
-  const isFormDisabled = () => {
-    return (
-      !isValidEmail(formdata.userEmail) ||
-      formdata.userName === "" ||
-      formdata.userDescription === ""
-      // !isValidCnic(formdata.userCnic) ||
-      // !isValidPhone(formdata.userNumber) ||
-      // formdata.userMessage === ""
-    );
-  };
-
-  // const handleSubmit = () => {
-  //   window.alert("forms submited succesfully");
-  //   setFormdata({
-  //     userName: "",
-  //     userEmail: "",
-  //     userDescription: "",
-  //     // userNumber: "",
-  //     // userMessage: "",
-  //   });
-  // };
-  const buttonColor = isFormDisabled() ? "bg-gray-300" : "bg-blue-400";
+const Updatedprofile = () => {
   return (
     <div className="md:p-8 flex justify-center items-center p-4  ">
       <div className="md:p-10 max-w-full md:w-[60%] p-5 flex justify-center items-center   ">
         <div className="flex flex-col gap-5 w-full p-4 border rounded-md">
           <h1 className="text-bold text-2xl text-blue-400 text-center">
-            CRUD Form
+            Updated Form
           </h1>
           <input
             type="text"
             className="border rounded-md p-2 w-full outline-none"
             placeholder="Name"
-            name={formdata.userName}
-            value={formdata.userName}
-            onChange={(e) =>
-              setFormdata({ ...formdata, userName: e.target.value })
-            }
+            // name={formdata.userName}
+            // value={formdata.userName}
+            // onChange={(e) =>
+            //   setFormdata({ ...formdata, userName: e.target.value })
+            // }
             required
           />
           <input
             type="text"
             className="border rounded-md p-2 w-full outline-none"
             placeholder="Email"
-            name={formdata.userEmail}
-            value={formdata.userEmail}
-            onChange={(e) =>
-              setFormdata({ ...formdata, userEmail: e.target.value })
-            }
+            // name={formdata.userEmail}
+            // value={formdata.userEmail}
+            // onChange={(e) =>
+            //   setFormdata({ ...formdata, userEmail: e.target.value })
+            // }
             required
           />
           <input
             type="text"
             className="border rounded-md p-2 w-full outline-none"
             placeholder="Description"
-            name={formdata.userDescription}
-            value={formdata.userDescription}
-            onChange={(e) =>
-              setFormdata({ ...formdata, userDescription: e.target.value })
-            }
+            // name={formdata.userDescription}
+            // value={formdata.userDescription}
+            // onChange={(e) =>
+            //   setFormdata({ ...formdata, userDescription: e.target.value })
+            // }
             required
           />
           {/* <input
@@ -126,7 +72,7 @@ const CrudForm = () => {
               }
             }}
           ></textarea> */}
-          <div className="flex justify-between gap-5">
+          {/* <div className="flex justify-between gap-5">
             <button
               className={`px-4 py-2 text-white rounded-3xl ${buttonColor} w-full`}
               // className="px-4 py-2 text-white rounded-3xl bg-green-500 w-full"
@@ -155,14 +101,12 @@ const CrudForm = () => {
             >
               Delete
             </button>
-          </div>
+          </div> */}
 
-          <div>
-            <UpdatedProfile />
-          </div>
+          {/* <div></div> */}
         </div>
       </div>
     </div>
   );
 };
-export default CrudForm;
+export default Updatedprofile;
